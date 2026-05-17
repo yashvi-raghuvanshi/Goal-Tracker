@@ -4,7 +4,10 @@ require('dotenv').config()
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://goal-tracker-fronten-82ocwbhek-goal-tracker-front.vercel.app'],
+  credentials: true
+}))
 app.use(express.json())
 
 // Routes
